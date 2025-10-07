@@ -1,0 +1,9 @@
+{
+  "name": "@exploria/web-administrator",
+  "dependencies": {
+    "@exploria/shared-core": "*",
+    "@exploria/web-shared": "*",
+    "bootstrap": "^5.3.0",
+    "vue": "^3.3.0"
+  }
+}
