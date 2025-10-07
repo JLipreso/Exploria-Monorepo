@@ -1,5 +1,5 @@
 {
-  "name": "@exploria/web-administrator",
+  "name": "@exploria/web-operator",
   "dependencies": {
     "@exploria/shared-core": "*",
     "@exploria/web-shared": "*",

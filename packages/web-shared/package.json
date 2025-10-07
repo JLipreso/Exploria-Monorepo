@@ -8,7 +8,7 @@
         ".": "./index.ts"
     },
     "dependencies": {
-        "@foxcity/shared-core": "*"
+        "@exploria/shared-core": "*"
     },
     "peerDependencies": {
         "vue": "^3.3.0"
