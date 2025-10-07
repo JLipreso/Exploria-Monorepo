@@ -9,7 +9,7 @@
     ],
     "scripts": {
         "dev:client": "npm run dev -w @exploria/web-client",
-        "dev:admin": "npm run dev -w @exploria/web-admin",
+        "dev:admin": "npm run dev -w @exploria/web-administrator",
         "dev:operator": "npm run dev -w @exploria/web-operator"
     },
     "dependencies": {
