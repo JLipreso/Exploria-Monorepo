@@ -1,0 +1,20 @@
+{
+    "name": "exploria-monorepo",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "apps/mobile/*",
+        "apps/web/*",
+        "backend/laravel"
+    ],
+    "scripts": {
+        "dev:client": "npm run dev -w @exploria/web-client",
+        "dev:admin": "npm run dev -w @exploria/web-admin",
+        "dev:operator": "npm run dev -w @exploria/web-operator"
+    },
+    "dependencies": {
+        "firebase": "^12.3.0",
+        "bootstrap": "^5.3.8"
+    }
+}
+  
