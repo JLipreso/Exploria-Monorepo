@@ -6,8 +6,8 @@
         <div class="logo-container">
           <img src="../../../assets/img/logo-with-text-dark-green-mini.png" alt="Exploria" class="logo" />
         </div>
-        <h1 class="portal-title">Administrator Portal</h1>
-        <p class="portal-subtitle">Sign in to manage the Exploria platform</p>
+        <h1 class="portal-title">Operator Portal</h1>
+        <p class="portal-subtitle">Sign in to manage your tours and services</p>
       </div>
 
       <!-- Error Alert -->
@@ -108,8 +108,16 @@
         Sign in with Google
       </button>
 
-      <!-- Forgot Password Link -->
+      <!-- New to Exploria -->
       <div class="text-center mt-4">
+        <p class="text-muted mb-2">New to Exploria?</p>
+        <a href="#" class="register-link" @click.prevent="handleRegister">
+          Become a Tour Operator
+        </a>
+      </div>
+
+      <!-- Forgot Password Link -->
+      <div class="text-center mt-3">
         <a href="#" class="forgot-password-link" @click.prevent="handleForgotPassword">
           Forgot your password?
         </a>
@@ -166,7 +174,7 @@ async function handleSignIn() {
     const ipAddress = await authPortalServices.getUserIpAddress();
 
     // Login to backend portal
-    const response = await authPortalServices.adminLogin({
+    const response = await authPortalServices.operatorLogin({
       email: firebaseUser.email!,
       firebase_uid: firebaseUser.uid,
       device_info: deviceInfo,
@@ -176,16 +184,16 @@ async function handleSignIn() {
 
     if (response.success && response.data) {
       // Store session
-      authPortalServices.storePortalSession(response.data, 'admin');
+      authPortalServices.storePortalSession(response.data, 'operator');
       
       successMessage.value = 'Sign in successful! Redirecting...';
       
       // Redirect to dashboard
       setTimeout(() => {
-        router.push('/admin/dashboard');
+        router.push('/operator/dashboard');
       }, 1500);
     } else {
-      errorMessage.value = response.message || 'Access denied. Administrator privileges required.';
+      errorMessage.value = response.message || 'Access denied. Operator account required.';
       
       // Sign out from Firebase if backend login failed
       await auth.signOut();
@@ -230,7 +238,7 @@ async function handleGoogleSignIn() {
     const ipAddress = await authPortalServices.getUserIpAddress();
 
     // Login to backend portal
-    const response = await authPortalServices.adminLogin({
+    const response = await authPortalServices.operatorLogin({
       email: firebaseUser.email!,
       firebase_uid: firebaseUser.uid,
       device_info: deviceInfo,
@@ -239,17 +247,13 @@ async function handleGoogleSignIn() {
     });
 
     if (response.success && response.data) {
-      // Store session
-      authPortalServices.storePortalSession(response.data, 'admin');
-      
+      authPortalServices.storePortalSession(response.data, 'operator');
       successMessage.value = 'Google sign in successful! Redirecting...';
-      
-      // Redirect to dashboard
       setTimeout(() => {
-        router.push('/admin/dashboard');
+        router.push('/operator/dashboard');
       }, 1500);
     } else {
-      errorMessage.value = response.message || 'Access denied. Administrator privileges required.';
+      errorMessage.value = response.message || 'Access denied. Operator account required.';
       
       // Sign out from Firebase if backend login failed
       await auth.signOut();
@@ -270,10 +274,17 @@ async function handleGoogleSignIn() {
 }
 
 /**
+ * Handle register
+ */
+function handleRegister() {
+  router.push('/operator/register');
+}
+
+/**
  * Handle forgot password
  */
 function handleForgotPassword() {
-  router.push('/admin/forgot-password');
+  router.push('/operator/forgot-password');
 }
 </script>
 

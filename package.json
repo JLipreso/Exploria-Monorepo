@@ -5,11 +5,14 @@
         "packages/*",
         "apps/mobile/*",
         "apps/web/administrator/",
+        "apps/web/operator/",
+        "apps/web/staff/",
         "backend/laravel"
     ],
     "scripts": {
         "dev:client": "npm run dev -w @exploria/web-client",
         "dev:admin": "npm run dev -w @exploria/web-administrator",
+        "dev:staff": "npm run dev -w @exploria/web-staff",
         "dev:operator": "npm run dev -w @exploria/web-operator"
     },
     "dependencies": {

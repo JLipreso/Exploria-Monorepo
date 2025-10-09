@@ -1,0 +1,194 @@
+.signin-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #243a2d 0%, #1a2820 100%);
+  padding: 20px;
+}
+
+.signin-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.signin-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.portal-title {
+  color: #243a2d;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.portal-subtitle {
+  color: #6c757d;
+  font-size: 16px;
+  margin: 0;
+}
+
+.signin-form {
+  margin-top: 24px;
+}
+
+.form-label {
+  color: #243a2d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  padding: 12px 16px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #243a2d;
+  box-shadow: 0 0 0 0.2rem rgba(36, 58, 45, 0.15);
+}
+
+.input-group .btn-outline-secondary {
+  border-radius: 0 8px 8px 0;
+  border: 2px solid #e9ecef;
+  border-left: none;
+}
+
+.input-group .form-control {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn-signin {
+  background-color: #243a2d;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-signin:hover:not(:disabled) {
+  background-color: #1a2820;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 58, 45, 0.3);
+}
+
+.btn-signin:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: #dee2e6;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background: white;
+  padding: 0 16px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-google {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-google:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #243a2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.forgot-password-link {
+  color: #243a2d;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #1a2820;
+  text-decoration: underline;
+}
+
+.signin-footer {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.alert {
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .signin-card {
+    padding: 24px;
+  }
+
+  .portal-title {
+    font-size: 24px;
+  }
+
+  .portal-subtitle {
+    font-size: 14px;
+  }
+}
