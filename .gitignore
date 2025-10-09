@@ -86,7 +86,7 @@
 
 # CLAUDE SPECIFIC
 
-/document/
+/document/~$*.docx
 
 /web/node_modules/
 /apps/web/node_modules/
