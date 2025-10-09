@@ -1,6 +1,15 @@
-import config from "../shared-utils/config.json";
+/**
+ * AuthFirebaseServices.ts
+ * Service for managing Firebase authentication API requests
+ * Location: packages/shared-core/shared-services/AuthFirebaseServices.ts
+ */
 
-const API_BASE_URL = config.server.api || 'http://localhost:8000';
+// API Base URL - Update this based on your environment
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
+/**
+ * Type Definitions
+ */
 
 export interface DeviceInfo {
   device_type?: string;
@@ -324,7 +333,7 @@ export function getDeviceInfo(): DeviceInfo {
     device_type: deviceType,
     device_model: navigator.platform || 'unknown',
     os_version: getOSVersion(),
-    app_version: config.app.version || '1.0.0',
+    app_version: import.meta.env.VITE_APP_VERSION || '1.0.0',
     browser: browser,
   };
 }
