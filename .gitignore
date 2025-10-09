@@ -89,6 +89,7 @@
 /document/
 
 /web/node_modules/
+/apps/web/node_modules/
 /apps/web/administrator/.vscode/
 /apps/web/administrator/public/
 /apps/web/administrator/env.d.ts
