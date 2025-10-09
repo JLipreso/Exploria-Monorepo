@@ -4,7 +4,7 @@
       <!-- Logo and Header -->
       <div class="signin-header">
         <div class="logo-container">
-          <img src="../../../assets/img/logo-with-text-dark-green-mini.png" alt="Exploria" class="logo" />
+          <img src="../assets/img/icons8-google-48.png" alt="Exploria" class="logo" />
         </div>
         <h1 class="portal-title">Administrator Portal</h1>
         <p class="portal-subtitle">Sign in to manage the Exploria platform</p>
@@ -104,7 +104,7 @@
         @click="handleGoogleSignIn"
         :disabled="loading"
       >
-        <img src="../../../assets/img/icons8-google-48.png" alt="Google" class="google-icon" />
+        <img src="../assets/img/icons8-google-48.png" alt="Google" class="google-icon" />
         Sign in with Google
       </button>
 
