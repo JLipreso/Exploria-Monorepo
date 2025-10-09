@@ -1,6 +1,12 @@
-import  config from "./shared-utils/config.json";
+import  project from "./shared-utils/project.json";
 import * as authPortalServices from "./shared-services/AuthPortalServices";
+
+
 export {
-    config,
+    /** Images */
+
+    /** Services */
+
+    project,
     authPortalServices
 }

@@ -1,4 +1,4 @@
-import config from "../shared-utils/config.json";
+import project from "../shared-utils/project.json";
 
 export interface PortalLoginRequest {
     email: string;
@@ -49,7 +49,7 @@ export interface PortalLoginRequest {
   }
   
   // Get API base URL from environment
-  const API_BASE_URL = config.app.base_url || 'http://localhost:8000';
+  const API_BASE_URL = project.server.api;
   
   /**
    * General portal login (auto-detect portal type)
@@ -61,7 +61,7 @@ export interface PortalLoginRequest {
     loginData: PortalLoginRequest
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/login`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export interface PortalLoginRequest {
     loginData: Omit<PortalLoginRequest, 'portal_type'>
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/admin/login`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/admin/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ export interface PortalLoginRequest {
     loginData: Omit<PortalLoginRequest, 'portal_type'>
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/staff/login`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/staff/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ export interface PortalLoginRequest {
     loginData: Omit<PortalLoginRequest, 'portal_type'>
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/operator/login`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/operator/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -184,7 +184,7 @@ export interface PortalLoginRequest {
     logoutData: LogoutRequest
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/logout`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/logout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ export interface PortalLoginRequest {
     sessionData: VerifySessionRequest
   ): Promise<PortalLoginResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/portal/auth/verify-session`, {
+      const response = await fetch(`${API_BASE_URL}portal/auth/verify-session`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -298,7 +298,7 @@ export interface PortalLoginRequest {
       os_version: osVersion,
       browser_name: browserName,
       browser_version: browserVersion,
-      app_version: config.app.version || '1.0.0',
+      app_version: project.app.version || '1.0.0',
     };
   }
   

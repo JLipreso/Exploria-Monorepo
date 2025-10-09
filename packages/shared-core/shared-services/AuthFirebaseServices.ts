@@ -1,6 +1,6 @@
-import config from "../shared-utils/config.json";
+import project from "../shared-utils/project.json";
 
-const API_BASE_URL = config.server.api || 'http://localhost:8000';
+const API_BASE_URL = project.server.api;
 
 export interface DeviceInfo {
   device_type?: string;
@@ -324,7 +324,7 @@ export function getDeviceInfo(): DeviceInfo {
     device_type: deviceType,
     device_model: navigator.platform || 'unknown',
     os_version: getOSVersion(),
-    app_version: config.app.version || '1.0.0',
+    app_version: project.app.version || '1.0.0',
     browser: browser,
   };
 }

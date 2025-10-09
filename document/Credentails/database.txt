@@ -1,5 +1,6 @@
 
-Domain: 
+Domain: exploria.jlipreso.com
+IP Address: 148.230.99.148
 Database Name: expl_main
 Database Username: expl_v7se3_67
 Password: F8-hLLd@P@mFkH4P

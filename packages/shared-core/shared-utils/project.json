@@ -1,0 +1,43 @@
+{
+    "server": {
+        "api":"http://exploria.test/api/"
+    },
+    "app": {
+        "base_url": "/",
+        "version": "1.0.0",
+        "dev": true
+    },
+    "firebaseConfig": {
+        "admin": {
+            "apiKey": "AIzaSyBmhGRBKMqCXd0W2JoHizgsAbo3_pR44Bk",
+            "authDomain": "exploria-monorepo.firebaseapp.com",
+            "projectId": "exploria-monorepo",
+            "storageBucket": "exploria-monorepo.firebasestorage.app",
+            "messagingSenderId": "871952789539",
+            "appId": "1:871952789539:web:738e23e427170cb0e5c196",
+            "measurementId": "G-Y6RXSYGV79"
+        },
+        "staff": {
+            "apiKey": "AIzaSyBmhGRBKMqCXd0W2JoHizgsAbo3_pR44Bk",
+            "authDomain": "exploria-monorepo.firebaseapp.com",
+            "projectId": "exploria-monorepo",
+            "storageBucket": "exploria-monorepo.firebasestorage.app",
+            "messagingSenderId": "871952789539",
+            "appId": "1:871952789539:web:a3efd25479d849f1e5c196",
+            "measurementId": "G-J0VX8NNH56"
+        },
+        "operator": {
+            "apiKey": "AIzaSyBmhGRBKMqCXd0W2JoHizgsAbo3_pR44Bk",
+            "authDomain": "exploria-monorepo.firebaseapp.com",
+            "projectId": "exploria-monorepo",
+            "storageBucket": "exploria-monorepo.firebasestorage.app",
+            "messagingSenderId": "871952789539",
+            "appId": "1:871952789539:web:e491d78d34f70254e5c196",
+            "measurementId": "G-QRX58T33Y2"
+        }
+    },
+    "firebaseAuthentication": {
+        "public_facing_name": "Exploria Travel",
+        "support_email": "lipreso.developer@gmail.com"
+    }
+}
